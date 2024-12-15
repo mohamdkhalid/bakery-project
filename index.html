@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Bakery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+    <header class="hero">
+        <nav>
+            <div class="logo">
+                <img src="./imgs/logo.png" alt="Bakery Logo">
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#" class="">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        <div class="hero-content">
+            <h3>Welcome to</h3>
+            <h1>Family Bakery</h1>
+            <p>We're the biggest, best equipped and most advanced Bakery in the greater Los Angeles area.</p>
+            <div class="buttons">
+                <a href="#about" class="btn primary">Learn More</a>
+                <a href="#contact" class="btn secondary">Contact us</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="about">
+        <div class="about-image">
+            <img src="./imgs/who.jpg" alt="About Us">
+        </div>
+        <div class="about-content">
+            <h2>Who we are?</h2>
+            <p>We have been operating for over 30 years and are Members of The Federation of Master Builders. We work on projects big and small from small residential extensions to full house.</p>
+            <ul class="features">
+                <li> We care about environment.</li>
+                <li> We are trusted by hundreds of clients.</li>
+                <li> Social media loves us!</li>
+                <li>This list is super easy to create.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="gallery" class="products">
+        <h2>Our Baking</h2>
+        <p>Learn more about our products</p>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="./imgs/img-1.jpg" alt="Superior Breads">
+                <h3>Superior Breads</h3>
+                <p>Fresh baked breads made with premium ingredients.</p>
+            </div>
+            <div class="product-card">
+                <img src="./imgs/img-2.jpg" alt="Bagels">
+                <h3>Bagels</h3>
+                <p>Traditional New York style bagels baked fresh daily.</p>
+            </div>
+            <div class="product-card">
+                <img src="./imgs/img-3.jpg" alt="Cookies">
+                <h3>Cookies</h3>
+                <p>Delicious homemade cookies in various flavors.</p>
+            </div>
+        </div>
+    </section>
+
+<section id="contact" class="form-section">
+        <h1>Contact <span>Us</span></h1>
+        <p>Stay connected with our latest updates</p>
+        <form id="user-form" >
+          <div  class="form-group">
+            <input type="text" id="name" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <input type="tel" id="phone" placeholder="Your Phone" required>
+          </div>
+          <button type="submit" onclick="validateForm()" class="send">Send</button>
+        </form>
+        </section>
+
+    <footer>
+        <img src="./imgs/logo.png" alt="Bakery Logo">
+        <p>&copy; 2024 Family Bakery. All rights reserved.</p>
+      
+        </div>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+</html>

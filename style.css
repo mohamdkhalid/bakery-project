@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Navigation */
+
+
+.hamburger {
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  display: none;
+}
+
+
+nav {
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed; /* Change to fixed */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure navbar stays on top */
+  background: #333; /* Add background color to make sure it's visible */
+}
+
+nav img {
+  width: 50%;
+}
+
+.logo {
+  text-align: left;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  padding-bottom: 0.5rem;
+  font-size: 20px;
+}
+
+
+.nav-links a:hover {
+  color: #8e7754;
+  border-bottom: 2px solid #8e7754;
+}
+
+
+.hamburger span{
+  background-color: #ddd;
+  width: 30px;
+  height: 2px;
+}
+@media (max-width: 768px) {
+  .hamburger {
+      display: flex;
+      margin-right: 15px;
+  }
+  .nav-links{
+      display: none;
+      flex-direction: column;
+      background-color: #333;
+      width: 100%;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      padding: 1rem;
+      gap: 1rem;
+  }
+  .nav-links.active{
+    display:flex;
+  }
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: url('./imgs/hero-background.jpg') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding-top: 5rem; 
+}
+
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  margin: 0.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.primary {
+  background: #8e7754;
+  color: white;
+}
+
+.secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* About Section */
+.about {
+  padding: 5rem 5%;
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.features {
+  margin-top: 2rem;
+}
+
+.features li {
+  margin: 1rem 0;
+}
+
+.features i {
+  color: #8e7754;
+  margin-right: 1rem;
+}
+
+/* Products Section */
+.products {
+  padding: 5rem 5%;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.product-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.form-section {
+  padding: 50px 20px;
+  background-color:white;
+  text-align: center;
+}
+
+.form-section h1 {
+  font-size: 45px;
+  color: #333336;
+  font-weight: 400;
+  padding-bottom:40px ;
+}
+.form-section h1 span{
+  color: #8e7754;
+  font-size: 45px;
+  font-weight: 400;
+} 
+.form-section p {
+  color:  rgb(117, 113, 113);
+  font-weight: 400;
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group input {
+  width: 65%;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #8e7754;
+  border-radius: 5px;
+}
+
+.send{
+  padding: 10px 20px;
+  font-size: 1.2em;
+  background-color: #8e7754;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.send:hover {
+  background-color: #675944;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: white;
+  padding: 2rem 5%;
+  text-align: center;
+}
+
+footer img {
+  width: 20%;
+  margin-bottom: 20px;
+}
